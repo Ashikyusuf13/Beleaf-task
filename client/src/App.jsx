@@ -1,9 +1,7 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import Home from "./pages/Home";
 import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
-import Headder from "./components/Headder";
+import Header from "./components/Header";
 import Salesinfo from "./components/Salesinfo";
 import Features from "./components/Features";
 import Brandlogo from "./components/Brandlogo";
@@ -23,7 +21,7 @@ const App = () => {
           path="/"
           element={
             <>
-              <Headder />,
+              <Header />,
               <Salesinfo />
               <Features />
               <Brandlogo />
@@ -37,7 +35,6 @@ const App = () => {
           }
         />
       </Routes>
-      {/* <Footer /> */}
     </>
   );
 };

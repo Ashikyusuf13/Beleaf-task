@@ -25,30 +25,41 @@ const Summarytoken = () => {
   ];
 
   return (
-    <div className="w-full bg-black px-8 sm:px-10 md:px-15 py-16 border-b border-blue-900">
-      <div className="flex flex-col md:flex-row gap-12 items-center">
+    <div className="w-full bg-black px-4 sm:px-8 md:px-15 py-12 sm:py-16 md:py-20 border-b border-blue-900">
+      <div className="flex flex-col md:flex-row gap-8 sm:gap-10 md:gap-12 items-center">
         {/* Left Side - Image Placeholder */}
         <div className="flex-1 flex justify-center">
-          <div className="w-80 h-80 border-2 border-blue-900 flex items-center justify-center bg-gradient-to-br from-blue-900 to-black rounded-lg">
-            <div className="text-6xl text-gray-600">🔒</div>
+          <div className="w-56 h-56 sm:w-64 sm:h-64 md:w-72 md:h-72 lg:w-80 lg:h-80 rounded-lg overflow-hidden">
+            <img
+              src="Image (3).png"
+              alt="Token Summary"
+              className="w-full h-full object-cover drop-shadow-2xl"
+            />
           </div>
         </div>
 
         {/* Right Side - Token Data */}
         <div className="flex-1">
-          <p className="text-sm text-blue-400 uppercase mb-4">summary of ico</p>
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
+          <p className="text-xs sm:text-sm md:text-base text-blue-400 uppercase mb-3 sm:mb-4 font-semibold">
+            summary of ico
+          </p>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 sm:mb-8">
             Token allocation <br /> summary
           </h2>
 
-          <div className="space-y-6">
+          <div className="space-y-4 sm:space-y-6">
             {tokenData.map((item, index) => (
-              <div key={index} className="pb-6 border-b border-gray-700">
+              <div
+                key={index}
+                className="pb-4 sm:pb-6 border-b border-gray-700"
+              >
                 <div className="flex justify-between items-center mb-2">
-                  <p className="text-gray-400 text-sm uppercase">
+                  <p className="text-gray-400 text-xs sm:text-sm md:text-base uppercase">
                     {item.label}
                   </p>
-                  <p className={`font-bold ${item.color}`}>{item.value}</p>
+                  <p className={`font-bold text-sm sm:text-base ${item.color}`}>
+                    {item.value}
+                  </p>
                 </div>
                 <div className="w-full bg-gray-700 h-1 rounded-full overflow-hidden">
                   <div
