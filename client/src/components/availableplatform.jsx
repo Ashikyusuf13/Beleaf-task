@@ -41,7 +41,10 @@ const Availableplatform = () => {
   };
 
   return (
-    <div className="w-full bg-black px-4 sm:px-8 md:px-15 py-12 sm:py-16 md:py-20 border-b border-blue-900">
+    <div
+      id="faq"
+      className="w-full bg-black px-4 sm:px-8 md:px-15 py-12 sm:py-16 md:py-20 border-b border-blue-900"
+    >
       <div className="flex flex-col md:flex-row items-center justify-between gap-8 sm:gap-10 md:gap-12">
         {/* Left Side - Text */}
         <div className="flex-1">

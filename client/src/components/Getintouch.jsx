@@ -32,8 +32,8 @@ const Getintouch = () => {
   return (
     <div className="px-4 sm:px-6 md:px-8 lg:px-10">
       <div
-        id="faq"
-        className="w-full bg-linear-to-r from-purple-600 to-blue-600 relative overflow-hidden"
+        id="getintouch"
+        className="w-full bg-gradient-to-r from-purple-600 via-blue-600 to-purple-700 relative overflow-hidden"
       >
         <div className="px-4 sm:px-8 md:px-15 py-12 sm:py-16 md:py-20">
           {/* Background Decorative Images */}

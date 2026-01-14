@@ -10,3 +10,54 @@ body {
     background-color: black;
     color: white;
 }
+/* Add this to your index.css or App.css file */
+
+@layer utilities {
+  /* Diagonal gradient background matching Figma */
+  .bg-diagonal-gradient {
+    background: linear-gradient(135deg, #000000 0%, #1a1a2e 25%, #2d3748 50%, #94a3b8 75%, #e5e7eb 100%);
+  }
+  
+  /* Alternative - more subtle version */
+  .bg-diagonal-gradient-subtle {
+    background: linear-gradient(135deg, #0a0a0f 0%, #1a1a28 30%, #252535 60%, #6b7280 85%, #d1d5db 100%);
+  }
+  
+  /* Radial gradient overlay */
+  .bg-radial-overlay {
+    background: radial-gradient(circle at center, rgba(59, 130, 246, 0.1), transparent 70%);
+  }
+  
+  /* Header specific gradient */
+  .bg-header-gradient {
+    background: linear-gradient(135deg, 
+      #000000 0%, 
+      #0f0f1a 15%, 
+      #1a1a2e 30%, 
+      #2d3748 50%, 
+      #64748b 70%, 
+      #94a3b8 85%, 
+      #cbd5e1 95%, 
+      #f1f5f9 100%
+    );
+  }
+}
+
+/* Custom navbar blur effect */
+.navbar-blur {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  background: rgba(0, 0, 0, 0.85);
+}
+
+/* Smooth gradient transitions */
+.gradient-animate {
+  background-size: 200% 200%;
+  animation: gradient-shift 15s ease infinite;
+}
+
+@keyframes gradient-shift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}

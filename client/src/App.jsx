@@ -14,7 +14,7 @@ import Getintouch from "./components/Getintouch";
 
 const App = () => {
   return (
-    <>
+    <div className="min-h-screen bg-black">
       <Navbar />
       <Routes>
         <Route
@@ -35,7 +35,7 @@ const App = () => {
           }
         />
       </Routes>
-    </>
+    </div>
   );
 };
 

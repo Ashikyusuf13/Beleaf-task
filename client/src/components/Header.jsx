@@ -4,7 +4,7 @@ const Header = () => {
   return (
     <div
       id="header"
-      className="w-full bg-black px-4 sm:px-8 md:px-15 py-20 md:py-24 flex flex-col md:flex-row justify-between items-center gap-4 md:gap-8 relative overflow-hidden mt-16 md:mt-0"
+      className="w-full px-4 sm:px-8 md:px-15 py-20 md:py-24 flex flex-col md:flex-row justify-between items-center gap-4 md:gap-8 relative overflow-hidden mt-16 md:mt-0 bg-gradient-to-br from-black  to-transparent"
     >
       <div>
         <img
@@ -13,7 +13,6 @@ const Header = () => {
           className="w-full top-0 left-0 right-0 absolute"
         />
       </div>
-
       {/* left side */}
       <div className="flex-1 z-10 px-2 md:px-0">
         <p className="text-xs sm:text-sm text-gray-400 mb-3 md:mb-4">
@@ -23,7 +22,7 @@ const Header = () => {
           Investing in <br /> things backed <br /> by products
         </h1>
         <div className="flex flex-col sm:flex-row gap-3 md:gap-4">
-          <button className="bg-linear-to-r from-violet-600 to-indigo-600 px-4 sm:px-6 py-2 md:py-3 text-white text-sm md:text-base font-bold rounded-lg flex items-center justify-center gap-2 transition duration-300 hover:shadow-lg">
+          <button className="bg-gradient-to-r from-violet-600 to-indigo-600 px-4 sm:px-6 py-2 md:py-3 text-white text-sm md:text-base font-bold rounded-lg flex items-center justify-center gap-2 transition duration-300 hover:shadow-lg">
             <span>◉</span> WHITEPAPER
           </button>
           <button className="bg-transparent border border-gray-600 hover:border-gray-400 text-white px-4 sm:px-6 py-2 md:py-3 text-sm md:text-base font-bold rounded-lg flex items-center justify-center gap-2 transition duration-300">
@@ -42,8 +41,8 @@ const Header = () => {
       </div>
 
       {/* Background decoration */}
-      <div className="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
-        <div className="absolute inset-0 bg-linear-to-r from-blue-900 to-transparent"></div>
+      <div className="absolute top-0 left-0 w-full h-full opacity-30 pointer-events-none">
+        <div className="absolute inset-0 bg-radial-gradient from-blue-900/40 via-purple-900/20 to-transparent"></div>
       </div>
     </div>
   );

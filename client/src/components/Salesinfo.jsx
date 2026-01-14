@@ -42,10 +42,10 @@ const Salesinfo = () => {
   return (
     <div
       id="salesinfo"
-      className="w-full bg-black px-4 sm:px-8 md:px-15 -mt-20 md:-mt-30 relative overflow-hidden py-12 md:py-16 flex flex-col items-center justify-between lg:flex-row gap-6 md:gap-10"
+      className="w-full px-4 sm:px-8 md:px-15 -mt-10 md:-mt-50 relative overflow-hidden py-12 md:py-16 flex flex-col items-center justify-between lg:flex-row gap-6 md:gap-10"
     >
       {/* left side */}
-      <div className="flex-1 text-white w-full bg-transparent p-4 sm:p-6 md:p-8 border border-blue-900 shadow-lg">
+      <div className="flex-1 z-10 mt-50 text-white w-full bg-transparent p-4 sm:p-6 md:p-8 border border-blue-900 shadow-lg">
         <h2 className="text-xl sm:text-2xl font-bold mb-6 md:mb-8">
           Token sales progress
         </h2>
@@ -106,7 +106,7 @@ const Salesinfo = () => {
       </div>
 
       {/* right side */}
-      <div className="flex-1 text-white w-full bg-transparent p-4 sm:p-6 md:p-8 border border-blue-900 shadow-lg">
+      <div className="flex-1 z-10 mt-50 text-white w-full bg-transparent p-4 sm:p-6 md:p-8 border border-blue-900 shadow-lg">
         <h2 className="text-xl sm:text-2xl font-bold mb-6 md:mb-8">
           Sales information
         </h2>
@@ -174,8 +174,15 @@ const Salesinfo = () => {
         </div>
       </div>
       {/* Background decoration */}
+      <div className="z-0 absolute inset-0">
+        <img
+          src="BG Image (1).png"
+          alt="background"
+          className="w-full h-full  object-cover  opacity-80"
+        />
+      </div>
       <div className="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
-        <div className="absolute inset-0 bg-linear-to-r from-blue-900 to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-900/30 via-purple-900/20 to-transparent"></div>
       </div>
     </div>
   );

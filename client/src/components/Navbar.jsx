@@ -50,8 +50,8 @@ const Navbar = () => {
       <div
         className={`w-full px-4 sm:px-8 md:px-15 py-4 md:py-5 flex justify-between items-center fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           isScrolled
-            ? "bg-black/95 backdrop-blur-md border-b border-blue-900/30 shadow-2xl"
-            : "bg-transparent backdrop-blur-none"
+            ? "navbar-blur border-b border-white/10 shadow-2xl"
+            : "bg-transparent"
         }`}
       >
         {/* logo */}
@@ -106,7 +106,7 @@ const Navbar = () => {
                 {link.name}
                 {/* Animated underline effect */}
                 <span
-                  className={`absolute bottom-0 left-0 h-0.5 bg-linear-to-r from-blue-400 to-blue-600 transition-all duration-500 ${
+                  className={`absolute -bottom-1 left-0 h-0.5 bg-gradient-to-r from-blue-400 to-blue-600 transition-all duration-500 ${
                     activeLink === link.name
                       ? "w-full"
                       : "w-0 group-hover:w-full"
@@ -119,7 +119,7 @@ const Navbar = () => {
 
         {/* Desktop Button & Sidebar Toggle */}
         <div className="flex gap-3 items-center">
-          <button className="hidden md:block bg-linear-to-r from-violet-500 to-pink-500 px-4 lg:px-6 py-2 text-white text-sm font-bold shadow-lg rounded-lg hover:shadow-2xl transition duration-300">
+          <button className="hidden md:block bg-gradient-to-r from-violet-600 to-pink-600 hover:from-violet-700 hover:to-pink-700 px-4 lg:px-6 py-2 text-white text-sm font-bold shadow-lg shadow-violet-500/30 rounded-lg hover:shadow-2xl hover:shadow-violet-500/50 transition duration-300">
             TRY IT NOW
           </button>
           <button
@@ -132,7 +132,7 @@ const Navbar = () => {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="absolute top-full left-0 right-0 bg-black/95 backdrop-blur-md border-b border-blue-900/30 md:hidden">
+          <div className="absolute top-full left-0 right-0 navbar-blur border-b border-white/10 md:hidden">
             <ul className="flex flex-col gap-4 p-4">
               {navLinks.map((link) => (
                 <li
@@ -149,24 +149,19 @@ const Navbar = () => {
                   {link.name}
                 </li>
               ))}
-              <li className="pt-2 border-t border-blue-900/30">
-                <button className="w-full bg-linear-to-r from-violet-500 to-pink-500 px-4 py-2 text-white text-sm font-bold shadow-lg rounded-lg hover:shadow-2xl transition duration-300">
+              <li className="pt-2 border-t border-white/10">
+                <button className="w-full bg-gradient-to-r from-violet-600 to-pink-600 px-4 py-2 text-white text-sm font-bold shadow-lg rounded-lg hover:shadow-2xl transition duration-300">
                   TRY IT NOW
                 </button>
               </li>
             </ul>
           </div>
         )}
-
-        {/* Background decoration */}
-        <div className="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
-          <div className="absolute inset-0 bg-linear-to-r from-blue-900 to-transparent"></div>
-        </div>
       </div>
 
       {/* Side Navbar */}
       <div
-        className={`fixed right-0 top-0 h-screen w-64 bg-black/95 backdrop-blur-md border-l border-blue-900/30 z-40 transition-transform duration-300 transform ${
+        className={`fixed right-0 top-0 h-screen w-64 navbar-blur border-l border-white/10 z-40 transition-transform duration-300 transform ${
           isSidebarOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
@@ -204,7 +199,7 @@ const Navbar = () => {
           </div>
 
           {/* Social Links */}
-          <div className="mb-12 border-t border-blue-900/30 pt-6">
+          <div className="mb-12 border-t border-white/10 pt-6">
             <h3 className="text-white text-sm font-bold uppercase mb-6 text-blue-400">
               Follow Us
             </h3>
@@ -224,10 +219,10 @@ const Navbar = () => {
 
           {/* Action Buttons */}
           <div className="mt-auto mb-6 space-y-3">
-            <button className="w-full bg-linear-to-r from-violet-500 to-pink-500 px-4 py-2 text-white text-sm font-bold shadow-lg rounded-lg hover:shadow-2xl transition duration-300">
+            <button className="w-full bg-gradient-to-r from-violet-600 to-pink-600 px-4 py-2 text-white text-sm font-bold shadow-lg rounded-lg hover:shadow-2xl transition duration-300">
               TRY IT NOW
             </button>
-            <button className="w-full border border-blue-900 text-blue-400 px-4 py-2 text-sm font-bold rounded-lg hover:bg-blue-900/20 transition duration-300">
+            <button className="w-full border border-blue-400 text-blue-400 px-4 py-2 text-sm font-bold rounded-lg hover:bg-blue-900/20 transition duration-300">
               DOCUMENTATION
             </button>
           </div>
@@ -237,7 +232,7 @@ const Navbar = () => {
       {/* Overlay */}
       {isSidebarOpen && (
         <div
-          className="fixed inset-0 bg-black/40 backdrop-blur-sm z-30"
+          className="fixed inset-0 bg-black/60 backdrop-blur-sm z-30"
           onClick={() => setIsSidebarOpen(false)}
         ></div>
       )}
